@@ -51,7 +51,7 @@ We will generate [SVG](https://www.w3.org/TR/SVG11/) files for a chessboard, lik
 
 ![Starting Chessboard](/images/2018-4-13/startingboard.svg)
 
-(Code [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/images/2018-4-13/startingboard.svg).)
+(Code [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/code/2018-4-13/startingboard.svg).)
 
 We'll generate this image using Groovy using various XML builders.
 
