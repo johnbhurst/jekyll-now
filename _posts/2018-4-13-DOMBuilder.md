@@ -1,6 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: Groovy DOMBuilder for programmatic DOM creation
 ---
 
 Groovy contains quite a variety of classes for working with XML.
