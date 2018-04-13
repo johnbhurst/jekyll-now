@@ -16,9 +16,9 @@ In one sense, `DOMBuilder` is well-documented. Books and online samples illustra
   a DOM object.
 A typical example from [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) is:
 
-{% highlight groovy %}
+```Groovy
 def doc = DOMBuilder.parse(new FileREader('data/plan.xml'))
-{% endhighlight %}
+```
 
 But `DOMBuilder` can also be used as a builder, like `MarkupBuilder`. This is not very well-documented. [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) hints at it, but does not spell it out, or provide examples.
 [MrHaki's excellent Groovy blog](http://mrhaki.blogspot.co.nz) does not mention it.
@@ -58,8 +58,7 @@ First we'll do the one that is the most familiar and well-documented: MarkupBuil
 
 The main piece of code is this:
 
-{% highlight groovy linenos %}
-{% raw %}
+```Groovy
 new MarkupBuilder().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810 810", width: "800", height: "800") {
   defs {
     style(type: "text/css", """
@@ -90,8 +89,7 @@ new MarkupBuilder().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810
     }
   }
 }
-{% endraw %}
-{% endhighlight %}
+```
 
 (The full code is [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/code/2018-4-13/makefen_svg_markupbuilder.groovy).)
 
