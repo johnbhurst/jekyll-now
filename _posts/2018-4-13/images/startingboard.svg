@@ -1,0 +1,170 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='-5 -5 810 810' width='800' height='800'>
+  <defs>
+    <style type='text/css'>
+      .piece { font-size: 90px; font-weight: 400; }
+      .blackp { fill: black; }
+      .whitep { fill: white; stroke: black; stroke-width: 2px;}
+    </style>
+  </defs>
+  <rect x='0' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='100' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='200' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='300' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='400' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='500' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='600' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='700' y='0' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='0' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='100' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='200' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='300' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='400' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='500' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='600' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='700' y='100' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='0' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='100' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='200' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='300' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='400' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='500' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='600' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='700' y='200' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='0' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='100' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='200' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='300' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='400' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='500' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='600' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='700' y='300' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='0' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='100' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='200' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='300' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='400' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='500' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='600' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='700' y='400' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='0' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='100' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='200' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='300' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='400' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='500' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='600' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='700' y='500' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='0' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='100' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='200' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='300' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='400' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='500' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='600' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='700' y='600' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='0' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='100' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='200' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='300' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='400' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='500' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='600' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#999' />
+  <rect x='700' y='700' width='100' height='100' stroke='black' stroke-width='3' fill='#ddd' />
+  <rect x='0' y='0' width='800' height='800' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='8' fill='none' />
+  <text>
+    <tspan x='5' y='80' class='blackp piece'>♜</tspan>
+  </text>
+  <text>
+    <tspan x='105' y='80' class='blackp piece'>♞</tspan>
+  </text>
+  <text>
+    <tspan x='205' y='80' class='blackp piece'>♝</tspan>
+  </text>
+  <text>
+    <tspan x='305' y='80' class='blackp piece'>♛</tspan>
+  </text>
+  <text>
+    <tspan x='405' y='80' class='blackp piece'>♚</tspan>
+  </text>
+  <text>
+    <tspan x='505' y='80' class='blackp piece'>♝</tspan>
+  </text>
+  <text>
+    <tspan x='605' y='80' class='blackp piece'>♞</tspan>
+  </text>
+  <text>
+    <tspan x='705' y='80' class='blackp piece'>♜</tspan>
+  </text>
+  <text>
+    <tspan x='5' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='105' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='205' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='305' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='405' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='505' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='605' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='705' y='180' class='blackp piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='5' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='105' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='205' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='305' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='405' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='505' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='605' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='705' y='680' class='whitep piece'>♟</tspan>
+  </text>
+  <text>
+    <tspan x='5' y='780' class='whitep piece'>♜</tspan>
+  </text>
+  <text>
+    <tspan x='105' y='780' class='whitep piece'>♞</tspan>
+  </text>
+  <text>
+    <tspan x='205' y='780' class='whitep piece'>♝</tspan>
+  </text>
+  <text>
+    <tspan x='305' y='780' class='whitep piece'>♛</tspan>
+  </text>
+  <text>
+    <tspan x='405' y='780' class='whitep piece'>♚</tspan>
+  </text>
+  <text>
+    <tspan x='505' y='780' class='whitep piece'>♝</tspan>
+  </text>
+  <text>
+    <tspan x='605' y='780' class='whitep piece'>♞</tspan>
+  </text>
+  <text>
+    <tspan x='705' y='780' class='whitep piece'>♜</tspan>
+  </text>
+</svg>
