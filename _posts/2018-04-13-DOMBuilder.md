@@ -275,3 +275,5 @@ def doc = DOMBuilder.parse(new StringReader(xml.toString()), false, true)
 ```
 
 Perhaps I will have more to say about this later.
+
+(The full code for this post is [here](https://github.com/johnbhurst/johnbhurst.github.io/tree/master/code/2018-04-13).)
