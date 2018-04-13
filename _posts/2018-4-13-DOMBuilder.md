@@ -16,9 +16,9 @@ In one sense, `DOMBuilder` is well-documented. Books and online samples illustra
   a DOM object.
 A typical example from [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) is:
 
-```groovy
+{% highlight groovy %}
 def doc = DOMBuilder.parse(new FileREader('data/plan.xml'))
-```
+{% endhighlight %}
 
 But `DOMBuilder` can also be used as a builder, like `MarkupBuilder`. This is not very well-documented. [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) hints at it, but does not spell it out, or provide examples.
 [MrHaki's excellent Groovy blog](http://mrhaki.blogspot.co.nz) does not mention it.
@@ -106,13 +106,13 @@ Now we will show how to create a DOM object programmatically using `DOMBuilder`.
 
 The main code uses the same closure as with `MarkupBuilder`, but executes it using `DOMBuilder` instead:
 
-```groovy
+{% highlight groovy %}
 def dom = DOMBuilder.newInstance().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810 810", width: "800", height: "800") {
   // XML-generating closure same as before ...
 }
 
 println XmlUtil.serialize(dom)
-```
+{% endhighlight %}
 
 (The full code is [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/code/2018-4-13/makefen_svg_dombuilder.groovy).)
 
@@ -127,7 +127,7 @@ Now we will see how to use a DOM object from `DOMBuilder` with another API.
 In this case, we want to convert our SVG document into a PNG image.
 We can use the [Apache Batik project](https://xmlgraphics.apache.org/batik/) for this:
 
-```groovy
+{% highlight groovy %}
 def doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument()
 def dom = new DOMBuilder(doc).svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810 810", width: "800", height: "800") {
   // XML-generating closure same as before ...
@@ -148,7 +148,7 @@ catch (Exception ex) {
   println "Transcoding failed: $ex.message"
   ex.printStackTrace(System.out)
 }
-```
+{% endhighlight %}
 
 (The full code is [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/code/2018-4-13/makefen_png_dombuilder.groovy).)
 
@@ -156,21 +156,21 @@ catch (Exception ex) {
 Unfortunately, this `Element`'s `ownerDocument` is not properly linked up with the element.
 We correct for this with the line:
 
-```groovy
+{% highlight groovy %}
 doc.appendChild(dom)
-```
+%{ endhighlight %}
 
 After this, we have a `org.w3c.dom.Document` with an SVG document model, and we try to use it with Batik.
 
 But we get an error:
 
-```
+{highlight plain %}
 Transcoding failed: org.apache.batik.dom.GenericElement cannot be cast to org.w3c.dom.svg.SVGSVGElement
 java.lang.ClassCastException: org.apache.batik.dom.GenericElement cannot be cast to org.w3c.dom.svg.SVGSVGElement
 	at org.apache.batik.anim.dom.SVGOMDocument.getRootElement(SVGOMDocument.java:235)
 	at org.apache.batik.transcoder.SVGAbstractTranscoder.transcode(SVGAbstractTranscoder.java:193)
 	at org.apache.batik.transcoder.image.ImageTranscoder.transcode(ImageTranscoder.java:92)
-```
+{% endhighlight %}
 
 Why is this?
 
@@ -178,7 +178,7 @@ The reason is that Batik has not been able to read the DOM as an SVG model becau
 
 We can add some code to observe this:
 
-```groovy
+{% highlight groovy %}
 def elt = doc.documentElement
 println "Element class: [${elt.class}]"
 println "localName = [$elt.localName]"
@@ -187,11 +187,11 @@ println "namespaceURI: [$elt.namespaceURI]"
 println "nodeName = [$elt.nodeName]"
 println "prefix = [$elt.prefix]"
 println "tagName = [$elt.tagName]"
-```
+{% endhighlight %}
 
 The output is:
 
-```
+{% highlight plain %}
 Element class: [class com.sun.org.apache.xerces.internal.dom.ElementImpl]
 localName = [null]
 name = [svg]
@@ -199,7 +199,7 @@ namespaceURI: [null]
 nodeName = [svg]
 prefix = [null]
 tagName = [svg]
-```
+{% endhighlight %}
 
 Sure enough, there is no namespace.
 
@@ -207,7 +207,7 @@ Sure enough, there is no namespace.
 
 We can fix this by switching to `StreamingDOMBuilder`, which supports namespaces:
 
-```groovy
+{% highlight groovy %}
 def builder = new StreamingDOMBuilder()
 def xml = builder.bind {
   namespaces << ["": "http://www.w3.org/2000/svg"]
@@ -226,7 +226,7 @@ file.withOutputStream {os ->
   TranscoderOutput output = new TranscoderOutput(os)
   transcoder.transcode(input, output)
 }
-```
+{% endhighlight %}
 
 (The full code is [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/code/2018-4-13/makefen_png_streamingdombuilder.groovy).)
 
@@ -234,7 +234,7 @@ Now when we run the code, Batik works, and we get a PNG file.
 
 We can add the same debugging `println` statements as before, and confirm that the XML namespace information is correct in the `Document`:
 
-```
+{% highlight plain %}
 Element class: [class com.sun.org.apache.xerces.internal.dom.ElementNSImpl]
 localName = [svg]
 name = [svg]
@@ -242,7 +242,7 @@ namespaceURI: [http://www.w3.org/2000/svg]
 nodeName = [svg]
 prefix = [null]
 tagName = [svg]
-```
+{% endhighlight %}
 
 Now we have a namespace-aware `Element`, and the `namespaceURI` property is set with the SVG namespace.
 
@@ -261,7 +261,7 @@ I have not found a way to generate DOM objects with namespaced attributes progra
 
 The best workaround I have is to use `StreamingMarkupBuilder`, serialize the XML, and re-read using `DOMBuilder` with namespace awareness enabled:
 
-```groovy
+{% highlight groovy %}
 def builder = new StreamingMarkupBuilder()
 def xml = builder.bind {
   namespaces << ["": "http://www.w3.org/2000/svg", "xl": "http://www.w3.org/1999/xlink"]
@@ -271,6 +271,6 @@ def xml = builder.bind {
 }
 def doc = DOMBuilder.parse(new StringReader(xml.toString()), false, true)
 // proceed with DOM object
-```
+{% endhighlight %}
 
 Perhaps I will have more to say about this later.
