@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Groovy DOMBuilder for programmatic DOM creation
+description: Programmatic XML DOM creation with Groovy MarkupBuilder, DOMBuilder, StreamingDOMBuilder.
 category: groovy
 tags: [groovy, xml, namespaces, svg, apache batik, markupbuilder, dombuilder, streamingdombuilder]
 ---
