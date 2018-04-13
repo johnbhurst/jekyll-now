@@ -21,7 +21,7 @@ def doc = DOMBuilder.parse(new FileREader('data/plan.xml'))
 ```
 
 But `DOMBuilder` can also be used as a builder, like `MarkupBuilder`. This is not very well-documented. [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) hints at it, but does not spell it out, or provide examples.
-[MrHaki's excellent Groovy blog](http://mrhaki.blogspot.co.nz) does not mention it.
+[MrHaki's excellent Groovy blog](http://mrhaki.blogspot.com) does not mention it.
 This feature is easy to miss, given all the examples of `DOMBuilder.parse()`.
 
 There is also `StreamingDOMBuilder`, which adds extra features like namespace support, but is much less documented than `DOMBuilder`.
