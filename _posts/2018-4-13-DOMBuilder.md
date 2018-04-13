@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Groovy DOMBuilder for programmatic DOM creation
+category: groovy
+tags: [groovy, xml, namespaces, svg, apache batik, markupbuilder, dombuilder, streamingdombuilder]
 ---
 
 Groovy contains quite a variety of classes for working with XML.
