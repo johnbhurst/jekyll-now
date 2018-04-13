@@ -59,6 +59,7 @@ First we'll do the one that is the most familiar and well-documented: MarkupBuil
 The main piece of code is this:
 
 {% highlight groovy linenos %}
+{% raw %}
 new MarkupBuilder().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810 810", width: "800", height: "800") {
   defs {
     style(type: "text/css", """
@@ -89,6 +90,7 @@ new MarkupBuilder().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810
     }
   }
 }
+{% endraw %}
 {% endhighlight %}
 
 (The full code is [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/code/2018-4-13/makefen_svg_markupbuilder.groovy).)
