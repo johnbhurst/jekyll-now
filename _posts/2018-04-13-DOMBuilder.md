@@ -49,7 +49,7 @@ When we want to interact with these APIs, we need a DOM object.
 
 We will generate [SVG](https://www.w3.org/TR/SVG11/) files for a chessboard, like this one:
 
-![Starting Chessboard](/images/2018-04-13/startingboard.svg)
+![Starting Chessboard](/code/2018-04-13/startingboard.svg)
 
 (Code [here](https://github.com/johnbhurst/johnbhurst.github.io/blob/master/code/2018-04-13/startingboard.svg).)
 
