@@ -203,7 +203,7 @@ Sure enough, there is no namespace.
 
 # StreamingDOMBuilder
 
-We can address this by switching to `StreamingDOMBuilder`, which supports namespaces:
+We can fix this by switching to `StreamingDOMBuilder`, which supports namespaces:
 
 ```groovy
 def builder = new StreamingDOMBuilder()
@@ -263,7 +263,7 @@ The best workaround I have is to use `StreamingMarkupBuilder`, serialize the XML
 def builder = new StreamingMarkupBuilder()
 def xml = builder.bind {
   namespaces << ["": "http://www.w3.org/2000/svg", "xl": "http://www.w3.org/1999/xlink"]
-  svg(version: "1.1", viewBox: "-5 -5 ${size*100+10} ${size*100+10}", width: "${size*100}", height: "${size*100}") {
+  svg(viewBox: "-5 -5 810 810", width: "800", height: "800") {
     // XML-generating closure
   }
 }
