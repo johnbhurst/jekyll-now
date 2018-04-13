@@ -14,13 +14,13 @@ Most notable are `DOMBuilder` and `StreamingDOMBuilder`.
 
 In one sense, `DOMBuilder` is well-documented. Books and online samples illustrate the use of `DOMBuilder` to parse XML files and produce
   a DOM object.
-A typical example from *Groovy In Action<* is:
+A typical example from [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) is:
 
 ```groovy
 def doc = DOMBuilder.parse(new FileREader('data/plan.xml'))
 ```
 
-But `DOMBuilder` can also be used as a builder, like `MarkupBuilder`. This is not very well-documented. *Groovy In Action* hints at it, but does not spell it out, or provide examples.
+But `DOMBuilder` can also be used as a builder, like `MarkupBuilder`. This is not very well-documented. [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) hints at it, but does not spell it out, or provide examples.
 [MrHaki's excellent Groovy blog](http://mrhaki.blogspot.co.nz) does not mention it.
 This feature is easy to miss, given all the examples of `DOMBuilder.parse()`.
 
