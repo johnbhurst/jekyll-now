@@ -10,7 +10,7 @@
 // This variant illustrates how DOMBuilder generates a DOM that can be used with other XML APIs,
 // in this case Apache Batik for transcoding SVG into other formats.
 // It uses namespace prefixes but without true namespace awareness.
-// For this purpose namespace awareness is required,  becasue Batik requires input DOM using the SVG namespace.
+// For this purpose namespace awareness is required,  because Batik requires input DOM using the SVG namespace.
 // This script does not work.
 // Instead, it prints out the (wrong) XML details in the generated DOM.
 
