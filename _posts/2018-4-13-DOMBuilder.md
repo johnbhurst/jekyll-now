@@ -16,7 +16,7 @@ In one sense, `DOMBuilder` is well-documented. Books and online samples illustra
   a DOM object.
 A typical example from [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) is:
 
-```Groovy
+```groovy
 def doc = DOMBuilder.parse(new FileREader('data/plan.xml'))
 ```
 
@@ -58,7 +58,7 @@ First we'll do the one that is the most familiar and well-documented: MarkupBuil
 
 The main piece of code is this:
 
-```Groovy
+```groovy
 new MarkupBuilder().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810 810", width: "800", height: "800") {
   defs {
     style(type: "text/css", """
@@ -104,7 +104,7 @@ Now we will show how to create a DOM object programmatically using `DOMBuilder`.
 
 The main code uses the same closure as with `MarkupBuilder`, but executes it using `DOMBuilder` instead:
 
-```Groovy
+```groovy
 def dom = DOMBuilder.newInstance().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810 810", width: "800", height: "800") {
   // XML-generating closure same as before ...
 }
@@ -125,7 +125,7 @@ Now we will see how to use a DOM object from `DOMBuilder` with another API.
 In this case, we want to convert our SVG document into a PNG image.
 We can use the [Apache Batik project](https://xmlgraphics.apache.org/batik/) for this:
 
-```Groovy
+```groovy
 def doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument()
 def dom = new DOMBuilder(doc).svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810 810", width: "800", height: "800") {
   // XML-generating closure same as before ...
@@ -154,7 +154,7 @@ catch (Exception ex) {
 Unfortunately, this `Element`'s `ownerDocument` is not properly linked up with the element.
 We correct for this with the line:
 
-```Groovy
+```groovy
 doc.appendChild(dom)
 ```
 
@@ -176,7 +176,7 @@ The reason is that Batik has not been able to read the DOM as an SVG model becau
 
 We can add some code to observe this:
 
-```Groovy
+```groovy
 def elt = doc.documentElement
 println "Element class: [${elt.class}]"
 println "localName = [$elt.localName]"
@@ -205,7 +205,7 @@ Sure enough, there is no namespace.
 
 We can fix this by switching to `StreamingDOMBuilder`, which supports namespaces:
 
-```Groovy
+```groovy
 def builder = new StreamingDOMBuilder()
 def xml = builder.bind {
   namespaces << ["": "http://www.w3.org/2000/svg"]
@@ -259,7 +259,7 @@ I have not found a way to generate DOM objects with namespaced attributes progra
 
 The best workaround I have is to use `StreamingMarkupBuilder`, serialize the XML, and re-read using `DOMBuilder` with namespace awareness enabled:
 
-```Groovy
+```groovy
 def builder = new StreamingMarkupBuilder()
 def xml = builder.bind {
   namespaces << ["": "http://www.w3.org/2000/svg", "xl": "http://www.w3.org/1999/xlink"]
