@@ -46,9 +46,9 @@ When we want to interact with these APIs, we need a DOM object.
 
 We will generate [SVG](https://www.w3.org/TR/SVG11/) files for a chessboard, like this one:
 
-![Starting Chessboard](images/startingboard.svg)
+![Starting Chessboard](/images/2018-4-13/startingboard.svg)
 
-(Code [here](images/startingboard.svg).)
+(Code [here](/images/2018-4-13/startingboard.svg).)
 
 We'll generate this image using Groovy using various XML builders.
 
@@ -91,7 +91,7 @@ new MarkupBuilder().svg(xmlns: "http://www.w3.org/2000/svg", viewBox: "-5 -5 810
 }
 ```
 
-(The full code is [here](2018-04-13/code/makefen_svg_markupbuilder.groovy).)
+(The full code is [here](/code/2018-4-13/makefen_svg_markupbuilder.groovy).)
 
 There is not much to see here. The main thing to notice is that the namespaces are not properly supported.
 The default namespace declaration for `xmlns` in the top-level `<svg>` element defines a default namespace,
@@ -112,7 +112,7 @@ def dom = DOMBuilder.newInstance().svg(xmlns: "http://www.w3.org/2000/svg", view
 println XmlUtil.serialize(dom)
 ```
 
-(The full code is [here](2018-04-13/code/makefen_svg_dombuilder.groovy).)
+(The full code is [here](/code/2018-4-13/makefen_svg_dombuilder.groovy).)
 
 Here we use `XmlUtil.serialize()` to write out the resulting XML, because `org.w3c.dom.Element` objects don't know how to serialize themselves.
 
@@ -148,7 +148,7 @@ catch (Exception ex) {
 }
 ```
 
-(The full code is [here](2018-04-13/code/makefen_png_dombuilder.groovy).)
+(The full code is [here](/code/2018-4-13/makefen_png_dombuilder.groovy).)
 
 `DOMBuilder` with a closure returns a `org.w3c.dom.Element`.
 Unfortunately, this `Element`'s `ownerDocument` is not properly linked up with the element.
@@ -226,7 +226,7 @@ file.withOutputStream {os ->
 }
 ```
 
-(The full code is [here](2018-04-13/code/makefen_png_streamingdombuilder.groovy).)
+(The full code is [here](/code/2018-4-13/makefen_png_streamingdombuilder.groovy).)
 
 Now when we run the code, Batik works, and we get a PNG file.
 
