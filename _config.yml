@@ -1,7 +1,7 @@
 #
 # This file contains configuration flags to customize your site
 #
-theme: jekyll-theme-tactile
+theme: jekyll-theme-slate
 
 # Name of your site (displayed in the header)
 name: John Hurst
