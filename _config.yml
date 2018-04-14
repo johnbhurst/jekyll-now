@@ -4,6 +4,7 @@
 plugins:
   - jekyll-seo-tag
 
+
 # Name of your site (displayed in the header)
 name: John Hurst
 
