@@ -8,14 +8,14 @@ tags: [groovy, xml, namespaces, svg, apache batik, markupbuilder, dombuilder, st
 
 Groovy contains quite a variety of classes for working with XML.
 
-The main Groovy ones are XmlParser, XmlStreamer, MarkupBuilder and StreamingMarkupBuilder.
+The main Groovy ones are `XmlParser`, `XmlStreamer`, `MarkupBuilder` and `StreamingMarkupBuilder`.
 
 These classes provide a distinctly Groovy-flavored approach to XML.
 
 But Groovy also provides some classes that help with mainstream Java XML APIs.
 Most notable are `DOMBuilder` and `StreamingDOMBuilder`.
 
-In one sense, `DOMBuilder` is well-documented. Books and online samples illustrate the use of `DOMBuilder` to parse XML files and produce
+In one sense, `DOMBuilder` is well-documented. Books and online samples show variants of `DOMBuilder#parse` to parse XML files and produce
   a DOM object.
 A typical example from [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) is:
 
@@ -25,7 +25,7 @@ def doc = DOMBuilder.parse(new FileREader('data/plan.xml'))
 
 But `DOMBuilder` can also be used as a builder, like `MarkupBuilder`. This is not very well-documented. [*Groovy In Action*](https://www.manning.com/books/groovy-in-action-second-edition) hints at it, but does not spell it out, or provide examples.
 [MrHaki's excellent Groovy blog](http://mrhaki.blogspot.com) does not mention it.
-This feature is easy to miss, given all the examples of `DOMBuilder.parse()`.
+This feature is easy to miss, given all the examples of `DOMBuilder#parse`.
 
 There is also `StreamingDOMBuilder`, which adds extra features like namespace support, but is much less documented than `DOMBuilder`.
 
@@ -57,7 +57,7 @@ We'll generate this image using Groovy using various XML builders.
 
 # MarkupBuilder
 
-First we'll do the one that is the most familiar and well-documented: MarkupBuilder.
+First we'll do the one that is the most familiar and well-documented: `MarkupBuilder`.
 
 The main piece of code is this:
 
