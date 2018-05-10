@@ -6,6 +6,8 @@ category: oracle
 tags: [oracle, 12c, database, sql, pl/sql, varray]
 ---
 
+# Inline PL/SQL functions in Oracle 12c
+
 Oracle 12c introduced the ability to define a PL/SQL function inline in an SQL query.
 The feature uses the `WITH` keyword, similarly to standard SQL's inline table expressions.
 
@@ -25,6 +27,8 @@ SELECT DISTINCT get_domain(catalog_url)
   FROM product_information;
 /
 ```
+
+# VARRAYs
 
 This feature can be very handy for complex data.
 
@@ -59,6 +63,8 @@ SELECT * FROM t;
 But this data structure cannot be acceed using SQL - we need to use PL/SQL.
 We have written a PL/SQL package for a bunch of standard functions.
 
+# Using an inline function to manipulate VARRAYs in SELECT
+
 But what about ad-hoc queries and data fixes?
 
 Until 12c these would have required writing new (possibly temporary) package functions.
@@ -86,6 +92,8 @@ FROM   t;
          1 VARRAY_NUMBER(12000, 23000, 34000)
          2 VARRAY_NUMBER(45000, 56000, 67000)
 ```
+
+# UPDATEs
 
 We can also use this for `UPDATE`s, though the syntax is a little awkward.
 I could not get inline functions to work in front of the `UPDATE` keyword itself, only in front of `SELECT`.
@@ -116,6 +124,8 @@ SELECT * FROM t;
          1 VARRAY_NUMBER(12000, 23000, 34000)
          2 VARRAY_NUMBER(45000, 56000, 67000)
 ```
+
+# Conclusion
 
 In my opinion, it's best to use this feature judiciously.
 Putting common logic into packages avoids duplicating code and allows it to be shared by queries, views and procedures.
