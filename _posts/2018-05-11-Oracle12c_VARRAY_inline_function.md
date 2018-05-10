@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Oracle Database: inline PL/SQL functions and VARRAYs
+title: Oracle Database - inline PL/SQL functions and VARRAYs
 description: Using Oracle 12c inline PL/SQL functions to manipulate VARRAYs.
 category: oracle
 tags: [oracle, 12c, database, sql, pl/sql, varray]
