@@ -117,5 +117,11 @@ SELECT * FROM t;
          2 VARRAY_NUMBER(45000, 56000, 67000)
 ```
 
-The full code is [here](/code/2018-05-11/varray.sql).
+In my opinion, it's best to use this feature judiciously.
+Putting common logic into packages avoids duplicating code and allows it to be shared by queries, views and procedures.
+Packages should still be the default choice for an applications's PL/SQL code.
+The inline function feature is most appropriate for ad-hoc queries and data updates.
 
+As with all features, this one should be assessed on its fit for your particular situation and requirements.
+
+The full code for this post is [here](/code/2018-05-11/varray.sql).
