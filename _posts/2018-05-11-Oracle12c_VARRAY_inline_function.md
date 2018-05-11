@@ -60,7 +60,7 @@ SELECT * FROM t;
          2 VARRAY_NUMBER(450, 560, 670)
 ```
 
-But this data structure cannot be acceed using SQL - we need to use PL/SQL.
+But this data structure cannot be accessed using SQL - we need to use PL/SQL.
 We have written a PL/SQL package for a bunch of standard functions.
 
 # Using an inline function to manipulate VARRAYs in SELECT
