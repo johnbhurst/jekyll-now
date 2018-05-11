@@ -6,8 +6,6 @@ category: oracle
 tags: [oracle, 12c, database, sql, pl/sql, varray]
 ---
 
-# Inline PL/SQL functions in Oracle 12c
-
 Oracle 12c introduced the ability to define a PL/SQL function inline in an SQL query.
 The feature uses the `WITH` keyword, similarly to standard SQL's inline table expressions.
 
