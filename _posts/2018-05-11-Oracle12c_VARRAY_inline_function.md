@@ -61,7 +61,7 @@ SELECT * FROM t;
 But this data structure cannot be accessed using SQL - we need to use PL/SQL.
 We have written a PL/SQL package for a bunch of standard functions.
 
-# Using an inline function to manipulate VARRAYs in SELECT
+# VARRAY in SELECT
 
 But what about ad-hoc queries and data fixes?
 
@@ -91,7 +91,7 @@ FROM   t;
          2 VARRAY_NUMBER(45000, 56000, 67000)
 ```
 
-# UPDATEs
+# VARRAY in UPDATE
 
 We can also use this for `UPDATE`s, though the syntax is a little awkward.
 I could not get inline functions to work in front of the `UPDATE` keyword itself, only in front of `SELECT`.
